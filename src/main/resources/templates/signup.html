@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Price list Main page</title>
+    <title>Sign Up</title>
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
@@ -18,12 +18,13 @@
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
 
+    <!--
 
-    <!-- Host Cloud Template
+    Host Cloud Template
 
-     https://templatemo.com/tm-541-host-cloud   -->
+    https://templatemo.com/tm-541-host-cloud
 
-
+    -->
 </head>
 
 <body>
@@ -42,71 +43,66 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand"><h2>Price <em>List</em></h2></a>
-            <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button> -->
+            <a class="navbar-brand" href="/index"><h2>Price <em>List</em></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/products}">Our Products and prices</a>
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+                        <a class="nav-link" href="products.html">Our Products and Prices</a>
                     </li>
                 </ul>
             </div>
+            <div class="functional-buttons">
+                <ul>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="/index/signup">Sign Up</a></li>
+                </ul>
+
+            </div>
+
         </div>
     </nav>
 </header>
 
 <!-- Page Content -->
-<!-- Banner Starts Here -->
-<div class="banner">
+<!-- Heading Starts Here -->
+<div class="page-heading header-text">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="header-text caption">
-                    <h2>Please log in to see our products and price list</h2>
-                    <div id="login-section">
-                        <div class="functional-buttons">
-                            <ul>
-                                <li><a href="/index/">Log in</a></li>
-                                <li><a href="/index/signup">Sign Up</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <!-- <form id="suggestion_form" name="gs" method="get" action="#">
-                       <div class="searchText">
-
-                          <input type="text" name="q" class="searchText" placeholder="Enter your domain here..."
-                                       autocomplete="on">
-                                <ul>
-                                    <li><label><input type="checkbox" name="ext_com"
-                                                      value="1"><span>.com <em>($10/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_net"
-                                                      value="1"><span>.net <em>($12/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_org"
-                                                      value="1"><span>.org <em>($8/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_in" value="1"><span>.in <em>($6/yr)</em></span></label>
-                                    </li>
-                                </ul>
-                             </div>
-                             <input type="submit" name="results" class="main-button" value="Search Now">
-                         </form>
-                         <div class="advSearch_chkbox">
-                         </div> -->
-                </div>
+            <div class="col-md-12">
+                <h1>Create Your Account</h1>
             </div>
+            <form class="form_settings" role="form" th:object="${index}" th:action="@{/index/signup}" method="post">
+
+                <div>
+                    <input type="text" name="username" placeholder="Your username">
+                </div>
+
+                <div>
+                    <input type="password" name="password" placeholder="Your password">
+                </div>
+
+                <div>
+                    <input type="password" name="passwordConfirm" placeholder="Re-enter password">
+                </div>
+
+                <div>
+                    <input type="submit" value="Create user" class="button blue-button">
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-<!-- Banner Ends Here -->
+<!-- Heading Ends Here -->
 
 
 <!-- Footer Starts Here -->
@@ -127,20 +123,6 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-item">
                     <div class="footer-heading">
-                        <h2>Useful Links</h2>
-                    </div>
-                    <ul class="footer-list">
-                        <li>
-                            <a href="https://www.google.com/search?q=weather&rlz=1C1CHBD_enPL907PL907&oq=weat&aqs=chrome.0.0i67j69i57j0i67i457j0i402j0i67j0l4j46.2232j1j7&sourceid=chrome&ie=UTF-8">Weather</a>
-                        </li>
-                        <li><a href="https://www.wp.pl/">Latest News</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-item">
-                    <div class="footer-heading">
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
@@ -153,8 +135,8 @@
             </div>
             <div class="col-md-12">
                 <div class="sub-footer">
-                    <p>Anna Prusik. Template designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
-                    </p>
+                    <p>Anna Prusik
+                        - Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
                 </div>
             </div>
         </div>
