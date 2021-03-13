@@ -1,16 +1,36 @@
 package pricelistapp.pricelist.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String index() {
+    @GetMapping("/")
+    public String goToSPersons() {
+        return "redirect:/index";
+    }
+
+    @GetMapping(value = "/index")
+    public String showIndex() {
         return "index";
+    }
+
+    @GetMapping(value = "/index/login")
+    public String showLogin() {
+        return "login";
+    }
+
+
+    @GetMapping(value = "/index/products")
+    public String showProducts() {
+        return "products";
+    }
+
+
+    @GetMapping(value = "/index/contact")
+    public String showContact() {
+        return "contact";
     }
 
 

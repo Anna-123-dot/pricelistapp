@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.com">
+<html xmlns:th="http://www.thymeleaf.com">
 
 <head>
 
@@ -16,7 +16,7 @@
 
     <!-- Additional CSS Files -->
 
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 
 
     <!-- Host Cloud Template
@@ -27,16 +27,6 @@
 </head>
 
 <body>
-
-<!-- ***** Preloader Start *****
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-***** Preloader End ***** -->
 
 <!-- Header -->
 <header class="">
@@ -51,10 +41,10 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/products}">Our Products and prices</a>
+                        <a class="nav-link" th:href="@{/index/products}">Our Products and prices</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+                        <a class="nav-link" th:href="@{/index/contact}">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -73,33 +63,11 @@
                     <div id="login-section">
                         <div class="functional-buttons">
                             <ul>
-                                <li><a href="/index/">Log in</a></li>
+                                <li><a href="/index/login">Log in</a></li>
                                 <li><a href="/index/signup">Sign Up</a></li>
                             </ul>
                         </div>
                     </div>
-
-
-                    <!-- <form id="suggestion_form" name="gs" method="get" action="#">
-                       <div class="searchText">
-
-                          <input type="text" name="q" class="searchText" placeholder="Enter your domain here..."
-                                       autocomplete="on">
-                                <ul>
-                                    <li><label><input type="checkbox" name="ext_com"
-                                                      value="1"><span>.com <em>($10/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_net"
-                                                      value="1"><span>.net <em>($12/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_org"
-                                                      value="1"><span>.org <em>($8/yr)</em></span></label></li>
-                                    <li><label><input type="checkbox" name="ext_in" value="1"><span>.in <em>($6/yr)</em></span></label>
-                                    </li>
-                                </ul>
-                             </div>
-                             <input type="submit" name="results" class="main-button" value="Search Now">
-                         </form>
-                         <div class="advSearch_chkbox">
-                         </div> -->
                 </div>
             </div>
         </div>
@@ -145,6 +113,7 @@
                     </div>
                     <ul class="footer-list">
                         <li>Phone: <a href="#">012-345-6789</a></li>
+                        <li>Address: <a href="#">Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</a></li>
                         <li>Email: <a href="#">mail@fakecompany.com</a></li>
                         <li>Support: <a href="#">support@fakecompany.com</a></li>
                         <li>Website: <a href="#">www.fakecompany.com</a></li>

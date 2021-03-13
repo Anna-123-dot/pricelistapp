@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.com">
+<html xmlns:th="http://www.thymeleaf.com">
 
 <head>
 
@@ -16,7 +16,7 @@
 
     <!-- Additional CSS Files -->
 
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 
     <!--
 
@@ -29,21 +29,11 @@
 
 <body>
 
-<!-- ***** Preloader Start *****
-<div id="preloader">
-    <div class="jumper">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
-***** Preloader End ***** -->
-
 <!-- Header -->
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" th:href="@{index}"><h2>Price <em>List</em></h2></a>
+            <a class="navbar-brand" href="/index"><h2>Price <em>List</em></h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,18 +41,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                        <a class="nav-link" href="/index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Our Products and Prices</a>
+                        <a class="nav-link" href="/index/products">Our Products and Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index/contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="/index/login">Log in</a></li>
                     <li><a href="/index/signup">Sign Up</a></li>
                 </ul>
             </div>
@@ -76,12 +67,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Us</h1>
-                <p><a href="index.html">Home</a> / <span>Contact Us</span></p>
+                <h1>PLEASE LOG IN</h1>
             </div>
+            <form class="form_settings" role="form" th:object="${index}" th:action="@{/index/login}" method="get">
+
+                <div>
+                    <input type="text" name="login" placeholder="Your username">
+                </div>
+
+                <div>
+                    <input type="password" name="password" placeholder="Your password">
+                </div>
+
+
+                <div>
+                    <input type="submit" value="Log in" class="button blue-button">
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
 <!-- Heading Ends Here -->
 
 
@@ -106,10 +112,11 @@
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
-                        <li>Phone: <a href="#">010-020-0560</a></li>
-                        <li>Email: <a href="#">mail@company.com</a></li>
-                        <li>Support: <a href="#">support@company.com</a></li>
-                        <li>Website: <a href="#">www.company.com</a></li>
+                        <li>Phone: <a href="#">012-345-6789</a></li>
+                        <li>Address: <a href="#">Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</a></li>
+                        <li>Email: <a href="#">mail@fakecompany.com</a></li>
+                        <li>Support: <a href="#">support@fakecompany.com</a></li>
+                        <li>Website: <a href="#">www.fakecompany.com</a></li>
                     </ul>
                 </div>
             </div>
