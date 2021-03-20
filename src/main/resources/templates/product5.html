@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Price list Main page</title>
+    <title>Product no 5 </title>
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
@@ -18,12 +18,13 @@
 
     <link th:href="@{/css/style.css}" rel="stylesheet">
 
+    <!--
 
-    <!-- Host Cloud Template
+    Host Cloud Template
 
-     https://templatemo.com/tm-541-host-cloud   -->
+    https://templatemo.com/tm-541-host-cloud
 
-
+    -->
 </head>
 
 <body>
@@ -32,20 +33,25 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand"><h2>Price <em>List</em></h2></a>
-            <!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button> -->
+            <a class="navbar-brand" href="/index"><h2>Price <em>List</em></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/index/products}">Our Products and prices</a>
+                        <a class="nav-link" href="/index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/index/contact}">Contact Us</a>
+                        <a class="nav-link" href="/index/products">Our Products and Prices</a>
                     </li>
+                </ul>
+            </div>
+            <div class="functional-buttons">
+                <ul>
+                    <li><a href="/index/login">Log in</a></li>
+                    <li><a href="/index/signup">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -53,28 +59,18 @@
 </header>
 
 <!-- Page Content -->
-<!-- Banner Starts Here -->
-<div class="banner">
+<!-- Heading Starts Here -->
+<div class="page-heading header-text">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="header-text caption">
-                    <h2>Please log in to see our products and price list</h2>
-                    <div id="login-section">
-                        <div class="functional-buttons">
-                            <ul>
-                                <li><a th:href="@{/index/login}">Log in</a></li>
-                                <li><a th:href="@{/index/signup}">Sign Up</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12">
+                <h1>Product no 5 configuration</h1>
+
             </div>
         </div>
     </div>
 </div>
-
-<!-- Banner Ends Here -->
+<!-- Heading Ends Here -->
 
 
 <!-- Footer Starts Here -->
@@ -95,24 +91,10 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="footer-item">
                     <div class="footer-heading">
-                        <h2>Useful Links</h2>
-                    </div>
-                    <ul class="footer-list">
-                        <li>
-                            <a href="https://www.google.com/search?q=weather&rlz=1C1CHBD_enPL907PL907&oq=weat&aqs=chrome.0.0i67j69i57j0i67i457j0i402j0i67j0l4j46.2232j1j7&sourceid=chrome&ie=UTF-8">Weather</a>
-                        </li>
-                        <li><a href="https://www.wp.pl/">Latest News</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-item">
-                    <div class="footer-heading">
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
-                        <li>Phone: <a href="tel:+48721228316">012-345-6789</a></li>
+                        <li>Phone: <a href="tel:+48721228316">010-020-0560</a></li>
                         <li>Address: Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</li>
                         <li>Email: <a href="mailto:mail@fakecompany.com">mail@fakecompany.com</a></li>
                         <li>Support: <a href="mailto:support@fakecompany.com">support@fakecompany.com</a></li>
@@ -122,8 +104,8 @@
             </div>
             <div class="col-md-12">
                 <div class="sub-footer">
-                    <p>Anna Prusik. Template designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
-                    </p>
+                    <p>Anna Prusik
+                        - Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
                 </div>
             </div>
         </div>

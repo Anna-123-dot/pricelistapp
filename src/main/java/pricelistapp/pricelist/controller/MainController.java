@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
 
     @GetMapping("/")
-    public String goToSPersons() {
+    public String goToIndex() {
         return "redirect:/index";
     }
 
@@ -19,12 +19,6 @@ public class MainController {
     @GetMapping(value = "/index/login")
     public String showLogin() {
         return "login";
-    }
-
-
-    @GetMapping(value = "/index/products")
-    public String showProducts() {
-        return "products";
     }
 
 
