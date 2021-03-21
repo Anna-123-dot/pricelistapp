@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.com">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.com">
 
 <head>
 
@@ -41,9 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                        <a class="nav-link" href="/index">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/index/products">Our Products and Prices</a>
@@ -66,8 +64,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Us</h1>
+                <h1>Product no 1 configuration</h1>
+                <h2>Base price for this product is 1000Eur</h2>
+                <h3>Please choose additional equipment</h3>
+                <div class="card">
+                    <form class="form_settings">
+                        <div class="ui-fluid p-formgrid p-grid">
+                            <div class="p-field p-col-12 p-md-4">
+                                <label value="Feature no 1"/>Choose feature no1</label>
+                                <select id="opti0n" value="#{selectOneMenuView.selectedOption}">
 
+                                    <option value="Option1" itemValue="Option1">Option1</option>
+                                    <option value="Option2" itemValue="Option2">Option2</option>
+                                    <option value=="Option3" itemValue="Option3">Option3</option>
+
+                                </select>
+                                <input type="submit" value="Submit">
+                            </div>
+                            <div class="p-field p-col-12 p-md-4">
+                                <label value="Feature no 1"/>Choose feature no2</label>
+                                <select id="option" value="#{selectOneMenuView.selectedOption}">
+
+                                    <option value="Option1" itemValue="Option1">Option1</option>
+                                    <option value="Option2" itemValue="Option2">Option2</option>
+                                    <option value=="Option3" itemValue="Option3">Option3</option>
+
+                                </select>
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                    <h1>Total price for your configuration...</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -96,11 +124,11 @@
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
-                        <li>Phone: <a href="#">010-020-0560</a></li>
-                        <li>Address: <a href="#">Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</a></li>
-                        <li>Email: <a href="#">mail@company.com</a></li>
-                        <li>Support: <a href="#">support@company.com</a></li>
-                        <li>Website: <a href="#">www.company.com</a></li>
+                        <li>Phone: <a href="tel:+48721228316">010-020-0560</a></li>
+                        <li>Address: Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</li>
+                        <li>Email: <a href="mailto:mail@fakecompany.com">mail@fakecompany.com</a></li>
+                        <li>Support: <a href="mailto:support@fakecompany.com">support@fakecompany.com</a></li>
+                        <li>Website: <a href="https://www.fakecompany.com/" target="_blank">www.fakecompany.com</a></li>
                     </ul>
                 </div>
             </div>

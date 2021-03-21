@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.com">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.com">
 
 <head>
 
@@ -41,12 +41,12 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" th:href="/index">Home
+                        <a class="nav-link" href="/index">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="/index/products">Our Products and Prices</a>
+                        <a class="nav-link" href="/index/products">Our Products and Prices</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/index/contact">Contact Us</a>
@@ -55,8 +55,8 @@
             </div>
             <div class="functional-buttons">
                 <ul>
-                    <li><a th:href="/index/login">Log in</a></li>
-                    <li><a th:href="/index/signup">Sign Up</a></li>
+                    <li><a href="/index/login">Log in</a></li>
+                    <li><a href="/index/signup">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -86,7 +86,7 @@
                 </div>
 
                 <div>
-                    <input type="submit" value="Create user" class="button blue-button">
+                    <input type="submit" value="Create user" class="main-button">
                 </div>
             </form>
         </div>
@@ -117,11 +117,11 @@
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
-                        <li>Phone: <a href="#">012-345-6789</a></li>
-                        <li>Address: <a href="#">Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</a></li>
-                        <li>Email: <a href="#">mail@fakecompany.com</a></li>
-                        <li>Support: <a href="#">support@fakecompany.com</a></li>
-                        <li>Website: <a href="#">www.fakecompany.com</a></li>
+                        <li>Phone: <a href="tel:+48721228316">012-345-6789</a></li>
+                        <li>Address: Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</li>
+                        <li>Email: <a href="mailto:mail@fakecompany.com">mail@fakecompany.com</a></li>
+                        <li>Support: <a href="mailto:support@fakecompany.com">support@fakecompany.com</a></li>
+                        <li>Website: <a href="https://www.fakecompany.com/" target="_blank">www.fakecompany.com</a></li>
                     </ul>
                 </div>
             </div>
