@@ -28,6 +28,9 @@ public class UserEntity {
     )
     private Collection<RoleEntity> roles;
 
+    public UserEntity() {
+    }
+
     public Long getId() {
         return id;
     }

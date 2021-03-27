@@ -64,37 +64,138 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Product no 1 configuration</h1>
-                <h2>Base price for this product is 1000Eur</h2>
-                <h3>Please choose additional equipment</h3>
+                <h1>Product type 1 configuration</h1>
                 <div class="card">
                     <form class="form_settings">
                         <div class="ui-fluid p-formgrid p-grid">
                             <div class="p-field p-col-12 p-md-4">
-                                <label value="Feature no 1"/>Choose feature no1</label>
-                                <select id="opti0n" value="#{selectOneMenuView.selectedOption}">
+                                <label value="Size"/>Size</label>
+                                <select id="optionS" value="#{selectOneMenuView.selectedOption}">
 
-                                    <option value="Option1" itemValue="Option1">Option1</option>
-                                    <option value="Option2" itemValue="Option2">Option2</option>
-                                    <option value=="Option3" itemValue="Option3">Option3</option>
+                                    <option value="Option1" itemValue="Option1">9</option>
+                                    <option value="Option2" itemValue="Option2">20</option>
+                                    <option value=="Option3" itemValue="Option3">50</option>
+                                    <option value=="Option4" itemValue="Option4">50</option>
+                                    <option value=="Option5" itemValue="Option5">100</option>
+                                    <option value=="Option6" itemValue="Option6">200</option>
+                                    <option value=="Option7" itemValue="Option7">400</option>
+                                    <option value=="Option8" itemValue="Option8">800</option>
+                                </select>
+                                <input type="submit" value="Submit">
+                            </div>
+                            <div class="p-field p-col-12 p-md-4">
+                                <label value="Housing"/>Housing</label>
+                                <select id="optionH" value="#{selectOneMenuView.selectedOption}">
+
+                                    <option value="Option1" itemValue="Option1">PE</option>
+                                    <option value="Option2" itemValue="Option2">PTFE</option>
 
                                 </select>
                                 <input type="submit" value="Submit">
                             </div>
                             <div class="p-field p-col-12 p-md-4">
-                                <label value="Feature no 1"/>Choose feature no2</label>
-                                <select id="option" value="#{selectOneMenuView.selectedOption}">
+                                <label value="Diaphragm"/>Diaphragm</label>
+                                <select id="optionD" value="#{selectOneMenuView.selectedOption}">
 
-                                    <option value="Option1" itemValue="Option1">Option1</option>
-                                    <option value="Option2" itemValue="Option2">Option2</option>
-                                    <option value=="Option3" itemValue="Option3">Option3</option>
-
+                                    <option value="Option1" itemValue="Option1">NBR</option>
+                                    <option value="Option2" itemValue="Option2">PTFE</option>
+                                    <option value=="Option3" itemValue="Option3">EPDM</option>
+                                    <option value=="Option4" itemValue="Option4">FKM</option>
+                                    <option value=="Option5" itemValue="Option5">PTFE TFM 1705B</option>
                                 </select>
                                 <input type="submit" value="Submit">
                             </div>
+                            <div class="ui-fluid p-formgrid p-grid">
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label value="Valve"/>Valve</label>
+                                    <select id="optionV" value="#{selectOneMenuView.selectedOption}">
+
+                                        <option value="Option1" itemValue="Option1">NBR</option>
+                                        <option value="Option2" itemValue="Option2">SS</option>
+                                        <option value=="Option3" itemValue="Option3">PU</option>
+                                        <option value=="Option4" itemValue="Option4">PTFE</option>
+                                        <option value=="Option5" itemValue="Option5">EPDM</option>
+                                        <option value=="Option6" itemValue="Option6">PTFE TFM 1635</option>
+                                        <option value=="Option7" itemValue="Option7">PE1000</option>
+                                    </select>
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                            <div class="ui-fluid p-formgrid p-grid">
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label value="Connections"/>Connections</label>
+                                    <select id="optionC" value="#{selectOneMenuView.selectedOption}">
+
+                                        <option value="Option1" itemValue="Option1">A[STANDARD]</option>
+                                        <option value="Option2" itemValue="Option2">B</option>
+                                        <option value=="Option3" itemValue="Option3">C</option>
+                                        <option value=="Option4" itemValue="Option4">D</option>
+                                        <option value=="Option5" itemValue="Option5">E</option>
+                                        <option value=="Option6" itemValue="Option6">F</option>
+                                        <option value=="Option7" itemValue="Option7">G</option>
+                                        <option value=="Option8" itemValue="Option8">H</option>
+                                        <option value=="Option9" itemValue="Option9">I</option>
+                                        <option value=="Option10" itemValue="Option10">J</option>
+                                        <option value=="Option11" itemValue="Option11">K</option>
+                                        <option value=="Option12" itemValue="Option12">L</option>
+                                        <option value=="Option13" itemValue="Option13">M</option>
+                                        <option value=="Option14" itemValue="Option14">N</option>
+                                        <option value=="Option15" itemValue="Option15">O</option>
+                                        <option value=="Option16" itemValue="Option16">P</option>
+                                        <option value=="Option17" itemValue="Option17">R</option>
+                                    </select>
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                            <div class="ui-fluid p-formgrid p-grid">
+                                <div class="p-field p-col-12 p-md-4">
+                                    <label value="AirValve"/>Air valve</label>
+                                    <select id="optionAV" value="#{selectOneMenuView.selectedOption}">
+
+                                        <option value="Option1" itemValue="Option1">Brass/NBR[STANDARD]</option>
+                                        <option value="Option2" itemValue="Option2">SS/FKM</option>
+                                        <option value=="Option3" itemValue="Option3">PET/FKM</option>
+                                        <option value=="Option4" itemValue="Option4">Brass/EPDM</option>
+                                        <option value=="Option5" itemValue="Option5">Brass/FKM</option>
+                                        <option value=="Option6" itemValue="Option6">PET/FKM s/s shaft</option>
+                                        <option value=="Option7" itemValue="Option7">Brass/PET/NBR</option>
+                                    </select>
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                            <div class="ui-fluid p-formgrid p-grid">
+                                <div class="p-field p-col-12 p-md-4">
+                                    <p>Select additional options:</p>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="radio" id="in/outlet" name="option" value="in/out"
+                                       checked>
+                                <label for="in/outlet">In/outlet</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="valveSeats" name="option" value="valveSeats">
+                                <label for="valveSeats">Valve seats</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="ATEX" name="option" value="ATEX">
+                                <label for="ATEX">ATEX</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="airSystem" name="option" value="airSystem">
+                                <label for="airSystem">Build-on air system</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="Aluminium" name="option" value="Aluminium">
+                                <label for="Aluminium">Aluminium center block</label>
+                            </div>
+
+
                         </div>
                     </form>
-                    <h1>Total price for your configuration...</h1>
+
                 </div>
             </div>
         </div>

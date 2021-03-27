@@ -3,7 +3,7 @@ package pricelistapp.pricelist.entity;
 import javax.persistence.*;
 import java.util.Collection;
 
-@Entity
+@Entity(name = "Roles")
 public class RoleEntity {
 
     @Id
@@ -14,6 +14,9 @@ public class RoleEntity {
 
     @ManyToMany(mappedBy = "roles")
     private Collection<UserEntity> users;
+
+    public RoleEntity() {
+    }
 
     public Long getId() {
         return id;

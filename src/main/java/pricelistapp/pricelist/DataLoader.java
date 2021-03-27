@@ -24,8 +24,8 @@ public class DataLoader implements ApplicationRunner {
 
     }
 
-    Iterable<UserEntity> users = userRepository.findAll();
-    boolean hasAdmin = false;
+//    Iterable<UserEntity> users = userRepository.findAll();
+//    boolean hasAdmin = false;
 
 //    for (UserEntity userEntity : users) {
 //        for (RoleEntity roleEntity : userEntity.getRoles()) {
