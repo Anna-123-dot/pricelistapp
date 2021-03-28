@@ -64,11 +64,16 @@
     <div class="container">
         <h1>Product type 1 adding form</h1>
         <div>
-            <form class="form-group" th:object="${product1Dto}" th:action="@{/product1/add}" th:method="post">
+            <form class="form-group" th:object="${addProduct2}" th:action="@{/index/products/product2/add}" th:method="post">
                 <div>
-                    <label>Size: </label>
-                    <input type="number" th:field="*{size}"/>
-                    <span th:if="${#fields.hasErrors('size')}" th:errors="*{size}" style="color: #ff0000;"></span>
+                    <label>Description: </label>
+                 <input type="text" name="description"/>
+                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>BSP: </label>
+                    <input type="text" name="BSP"/>
+                    <span th:if="${#fields.hasErrors('BSP')}" th:errors="*{BSP}" style="color: red;"></span>
                 </div>
                 <div>
                     <label>Housing: </label>
@@ -86,14 +91,15 @@
                     <span th:if="${#fields.hasErrors('valves')}" th:errors="*{valves}" style="color: red;"></span>
                 </div>
                 <div>
-                    <label>Connections: </label>
-                    <input type="text" th:field="*{connections}"/>
-                    <span th:if="${#fields.hasErrors('connections')}" th:errors="*{connections}" style="color: red;"></span>
+                    <label>Remark: </label>
+                    <input type="text" th:field="*{remark}"/>
+                    <span th:if="${#fields.hasErrors('remark')}" th:errors="*{remark}" style="color: red;"></span>
                 </div>
+
                 <div>
-                    <label>Connections: </label>
+                    <label>Price: </label>
                     <input type="number" th:field="*{price}"/>
-                    <span th:if="${#fields.hasErrors('price')}" th:errors="*{connections}" style="color: #ff0000;"></span>
+                    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" style="color: red;"></span>
                 </div>
                 <button type="submit" class="btn">Add product</button>
             </form>
@@ -114,8 +120,9 @@
                     <div class="footer-heading">
                         <h2>About Us</h2>
                     </div>
-                    <p>Host Cloud is provided by TemplateMo for free of charge. Anyone can download and use this CSS
-                        Bootstrap template for commercial purposes.</p>
+                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air operated diaphragm products, centrifugal products and other industrial process equipment.
+
+                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of premium products for various industrial applications. With experience from industrial fluid handling and products manufacture since 1980, we know what you as a customer require from an industrial products</p>
                 </div>
             </div>
 

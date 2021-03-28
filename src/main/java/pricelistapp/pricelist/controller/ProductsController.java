@@ -5,15 +5,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pricelistapp.pricelist.entity.Product1Entity;
 import pricelistapp.pricelist.model.Product1Dto;
-import pricelistapp.pricelist.service.ProductsService;
+import pricelistapp.pricelist.model.Product2Dto;
+import pricelistapp.pricelist.service.Product1Service;
+import pricelistapp.pricelist.service.Product2Service;
+
+import java.util.List;
 
 @Controller
 public class ProductsController {
 
     @Autowired
-    private ProductsService productsService;
+    private Product1Service product1Service;
+
+    @Autowired
+    private Product2Service product2Service;
 
     @GetMapping(value = "/index/products")
     public String showProducts() {
@@ -29,21 +35,21 @@ public class ProductsController {
     @RequestMapping(value = "/index/products/product1/add", method = RequestMethod.GET)
     public String addProduct1(Model model) {
 
-        model.addAttribute("addProduct", new Product1Dto());
+        model.addAttribute("addProduct1", new Product1Dto());
 
-        return "addProduct";
+        return "addProduct1";
     }
 
     @RequestMapping(value = "/index/products/product1/add", method = RequestMethod.POST)
-    public String createProduct1(@ModelAttribute("addProduct") Product1Entity product1Entity, BindingResult bindingResult) {
+    public String createProduct1(@ModelAttribute("addProduct1") Product1Dto product1Dto, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
-            return "addProduct";
+            return "addProduct1";
         }
+        product1Service.add(product1Dto);
 
-        productsService.add(product1Entity);
+        return "redirect:/index/products/product1";
 
-        return "redirect:/index";
     }
 
     @RequestMapping(value = "/index/products/product1/modify", method = RequestMethod.POST)
@@ -52,7 +58,7 @@ public class ProductsController {
         if (result.hasErrors()) {
             return "index";
         }
-        Product1Entity byId = productsService.getById(id);
+        Product1Dto byId = product1Service.getById(id);
         model.addAttribute("product1", id);
 
 
@@ -64,6 +70,35 @@ public class ProductsController {
     public String showProductType2() {
         return "product2";
     }
+
+    @GetMapping(value = "/index/products/product2/all")
+    public String findAllProductsType2(Model model) {
+        List<Product2Dto> allProduct2 = product2Service.findAll();
+        model.addAttribute("product2all", allProduct2);
+        return "product2all";
+
+    }
+
+    @RequestMapping(value = "/index/products/product2/add", method = RequestMethod.GET)
+    public String addProduct2(Model model) {
+
+        model.addAttribute("addProduct2", new Product2Dto());
+
+        return "addProduct2";
+    }
+
+    @RequestMapping(value = "/index/products/product2/add", method = RequestMethod.POST)
+    public String createProduct2(@ModelAttribute("addProduct2") Product2Dto product2Dto, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return "addProduct2";
+        }
+        product2Service.add(product2Dto);
+
+        return "redirect:/index/products/product2";
+
+    }
+
 
     @GetMapping(value = "/index/products/product3")
     public String showProductType3() {

@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Product no 3 </title>
+    <title>Product no 2 </title>
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
@@ -64,8 +64,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Product type 3 configuration</h1>
-
+                <table>
+                    <thead>
+                    <tr>
+                        <th> Id </th>
+                        <th> Description </th>
+                        <th> BSP </th>
+                        <th> Housing </th>
+                        <th> Diaphragm </th>
+                        <th> Valves </th>
+                        <th> Remark </th>
+                        <th> Price </th>
+                    </tr>
+                    </thead>
+                    <tr th:each="product2: ${product2all}">
+                        <td th:text="${product2.id}"/>
+                        <td th:text="${product2.description}"/>
+                        <td th:text="${product2.BSP}"/>
+                        <td th:text="${product2.housing}"/>
+                        <td th:text="${product2.diaphragm}"/>
+                        <td th:text="${product2.valves}"/>
+                        <td th:text="${product2.remark}"/>
+                        <td th:text="${product2.price}"/>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -82,9 +104,13 @@
                     <div class="footer-heading">
                         <h2>About Us</h2>
                     </div>
-                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air operated diaphragm products, centrifugal products and other industrial process equipment.
+                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air
+                        operated diaphragm products, centrifugal products and other industrial process equipment.
 
-                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of premium products for various industrial applications. With experience from industrial fluid handling and products manufacture since 1980, we know what you as a customer require from an industrial products</p>
+                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of
+                        premium products for various industrial applications. With experience from industrial fluid
+                        handling and products manufacture since 1980, we know what you as a customer require from an
+                        industrial products</p>
                 </div>
             </div>
 

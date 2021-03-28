@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pricelistapp.pricelist.entity.UserEntity;
 import pricelistapp.pricelist.model.RegisterUserDto;
 import pricelistapp.pricelist.service.UserService;
 
@@ -29,8 +31,14 @@ public class UserController {
     @RequestMapping(value = "/index/signup", method = RequestMethod.POST)
     public String register(@ModelAttribute("user") @Valid RegisterUserDto user, BindingResult bindingResult) {
 
+        UserEntity userExists = userService.findByUsername(user.getUsername());
+
         if (bindingResult.hasErrors()) {
-            return "/signup";
+            return "signup";
+        }
+        if (userExists != null) {
+            bindingResult.addError(new FieldError("user", "username", "There is already a user registered with this username provided."));
+            return "signup";
         }
 
         userService.registerUser(user);

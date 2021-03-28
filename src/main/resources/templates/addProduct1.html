@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.com">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.com">
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Product no 3 </title>
+    <title>Product no 1 </title>
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
@@ -62,11 +62,52 @@
 <!-- Heading Starts Here -->
 <div class="page-heading header-text">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Product type 3 configuration</h1>
+        <h1>Product type 1 adding form</h1>
+        <div>
+            <form class="form-group" th:object="${addProduct1}" th:action="@{/index/products/product1/add}" th:method="post">
+                <div>
+                    <label>Size: </label>
+                 <input type="number" name="size"/>
+                    <select th:field="*{size}">
+                        <option th:value="'9'" th:number="9"></option>
+                        <option th:value="'20'" th:number="20"></option>
+                    </select>
+                    <span th:if="${#fields.hasErrors('size')}" th:errors="*{size}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Housing: </label>
+                    <input type="text" name="housing"/>
+                    <span th:if="${#fields.hasErrors('housing')}" th:errors="*{housing}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Diaphragm: </label>
+                    <input type="text" th:field="*{diaphragm}"/>
+                    <span th:if="${#fields.hasErrors('diaphragm')}" th:errors="*{diaphragm}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Valves: </label>
+                    <input type="text" th:field="*{valves}"/>
+                    <span th:if="${#fields.hasErrors('valves')}" th:errors="*{valves}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Connections: </label>
+                    <input type="text" th:field="*{connections}"/>
+                    <span th:if="${#fields.hasErrors('connections')}" th:errors="*{connections}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Air valves: </label>
+                    <input type="text" th:field="*{airValves}"/>
+                    <span th:if="${#fields.hasErrors('airValves')}" th:errors="*{airValves}" style="color: red;"></span>
+                </div>
+                <div>
+                    <label>Price: </label>
+                    <input type="number" th:field="*{price}"/>
+                    <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}" style="color: red;"></span>
+                </div>
+                <button type="submit" class="btn">Add product</button>
+            </form>
 
-            </div>
+        </div>
         </div>
     </div>
 </div>
@@ -136,4 +177,4 @@
 </script>
 
 </body>
-</html>
+</html></html>

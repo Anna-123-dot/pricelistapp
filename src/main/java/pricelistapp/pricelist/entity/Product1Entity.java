@@ -1,5 +1,7 @@
 package pricelistapp.pricelist.entity;
 
+import pricelistapp.pricelist.model.Product1Dto;
+
 import javax.persistence.*;
 
 @Entity(name ="Product1")
@@ -46,6 +48,8 @@ public class Product1Entity {
         this.codeLetter = codeLetter;
         this.price = price;
     }
+
+
 
     public double getPrice() {
         return price;
