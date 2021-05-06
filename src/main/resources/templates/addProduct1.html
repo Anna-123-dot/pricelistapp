@@ -64,10 +64,11 @@
     <div class="container">
         <h1>Product type 1 adding form</h1>
         <div>
-            <form class="form-group" th:object="${addProduct1}" th:action="@{/index/products/product1/add}" th:method="post">
+            <form class="form-group" th:object="${addProduct1}" th:action="@{/index/products/product1/add}"
+                  th:method="post">
                 <div>
                     <label>Size: </label>
-                 <input type="number" name="size"/>
+                    <input type="number" name="size"/>
                     <select th:field="*{size}">
                         <option th:value="'9'" th:number="9"></option>
                         <option th:value="'20'" th:number="20"></option>
@@ -92,7 +93,8 @@
                 <div>
                     <label>Connections: </label>
                     <input type="text" th:field="*{connections}"/>
-                    <span th:if="${#fields.hasErrors('connections')}" th:errors="*{connections}" style="color: red;"></span>
+                    <span th:if="${#fields.hasErrors('connections')}" th:errors="*{connections}"
+                          style="color: red;"></span>
                 </div>
                 <div>
                     <label>Air valves: </label>
@@ -108,8 +110,8 @@
             </form>
 
         </div>
-        </div>
     </div>
+</div>
 </div>
 <!-- Heading Ends Here -->
 
@@ -123,9 +125,13 @@
                     <div class="footer-heading">
                         <h2>About Us</h2>
                     </div>
-                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air operated diaphragm products, centrifugal products and other industrial process equipment.
+                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air
+                        operated diaphragm products, centrifugal products and other industrial process equipment.
 
-                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of premium products for various industrial applications. With experience from industrial fluid handling and products manufacture since 1980, we know what you as a customer require from an industrial products</p>
+                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of
+                        premium products for various industrial applications. With experience from industrial fluid
+                        handling and products manufacture since 1980, we know what you as a customer require from an
+                        industrial products</p>
                 </div>
             </div>
 

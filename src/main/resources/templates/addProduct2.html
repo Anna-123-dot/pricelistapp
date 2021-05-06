@@ -62,13 +62,15 @@
 <!-- Heading Starts Here -->
 <div class="page-heading header-text">
     <div class="container">
-        <h1>Product type 1 adding form</h1>
+        <h1>Product type 2 adding form</h1>
         <div>
-            <form class="form-group" th:object="${addProduct2}" th:action="@{/index/products/product2/add}" th:method="post">
+            <form class="form-group" th:object="${addProduct2}" th:action="@{/index/products/product2/add}"
+                  th:method="post">
                 <div>
                     <label>Description: </label>
-                 <input type="text" name="description"/>
-                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" style="color: red;"></span>
+                    <input type="text" name="description"/>
+                    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"
+                          style="color: red;"></span>
                 </div>
                 <div>
                     <label>BSP: </label>
@@ -105,8 +107,8 @@
             </form>
 
         </div>
-        </div>
     </div>
+</div>
 </div>
 <!-- Heading Ends Here -->
 
@@ -120,9 +122,13 @@
                     <div class="footer-heading">
                         <h2>About Us</h2>
                     </div>
-                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air operated diaphragm products, centrifugal products and other industrial process equipment.
+                    <p>Fakecompany is an independent, family owned, Polish manufacturer and global supplier of Air
+                        operated diaphragm products, centrifugal products and other industrial process equipment.
 
-                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of premium products for various industrial applications. With experience from industrial fluid handling and products manufacture since 1980, we know what you as a customer require from an industrial products</p>
+                        Fakecompany is a leading product manufacturer with the ambition to provide a wide range of
+                        premium products for various industrial applications. With experience from industrial fluid
+                        handling and products manufacture since 1980, we know what you as a customer require from an
+                        industrial products</p>
                 </div>
             </div>
 

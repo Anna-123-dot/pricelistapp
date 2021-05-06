@@ -2,7 +2,7 @@ package pricelistapp.pricelist.entity;
 
 import javax.persistence.*;
 
-@Entity(name ="Product2")
+@Entity(name = "Product2")
 public class Product2Entity {
 
     @Id
@@ -27,7 +27,7 @@ public class Product2Entity {
     @Column(nullable = false)
     private String remark;
 
-       @Column(nullable = false)
+    @Column(nullable = false)
     private double price;
 
     public Product2Entity() {

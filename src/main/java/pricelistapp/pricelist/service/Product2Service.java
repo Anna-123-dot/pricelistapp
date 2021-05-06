@@ -16,10 +16,9 @@ public class Product2Service {
     private Product2Repository product2Repository;
 
 
-
     public List<Product2Dto> findAll() {
         List<Product2Entity> product2Entity = product2Repository.findAll();
-        List<Product2Dto> product2Dtos = ProductMapper.mapEntityListToDtoList(product2Entity);
+        List<Product2Dto> product2Dtos = ProductMapper.mapEntityListToDtoList2(product2Entity);
         return product2Dtos;
 
     }

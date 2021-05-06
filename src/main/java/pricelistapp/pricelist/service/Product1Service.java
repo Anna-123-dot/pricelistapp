@@ -1,11 +1,10 @@
 package pricelistapp.pricelist.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pricelistapp.pricelist.entity.Product1Entity;
+import pricelistapp.pricelist.mapper.ProductMapper;
 import pricelistapp.pricelist.model.Product1Dto;
-import pricelistapp.pricelist.model.Product2Dto;
 import pricelistapp.pricelist.repository.Product1Repository;
 
 import java.util.List;
@@ -17,9 +16,10 @@ public class Product1Service {
     private Product1Repository product1Repository;
 
 
-
     public List<Product1Dto> findAll() {
-        return null;
+        List<Product1Entity> product1Entity = product1Repository.findAll();
+        List<Product1Dto> product1Dtos = ProductMapper.mapEntityListToDtoList1(product1Entity);
+        return product1Dtos;
     }
 
     public boolean add(Product1Dto product1Dto) {
@@ -48,7 +48,6 @@ public class Product1Service {
     //3.zapisać Product1Entity do repozytorium
 
 
-
     public boolean modify(int id, Product1Dto product1Dto) {
         return false;
     }
@@ -60,7 +59,7 @@ public class Product1Service {
     }
 
     public Product1Dto getById(long id) {
-    return null;
+        return null;
     }
 }
 

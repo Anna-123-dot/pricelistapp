@@ -65,6 +65,12 @@ public class ProductsController {
         return "redirect:/index/products/product1";
     }
 
+    @GetMapping(value = "/index/products/product1/all")
+    public String findAllProductsType1(Model model) {
+        List<Product1Dto> allProduct1 = product1Service.findAll();
+        model.addAttribute("product1all", allProduct1);
+        return "product1all";
+    }
 
     @GetMapping(value = "/index/products/product2")
     public String showProductType2() {

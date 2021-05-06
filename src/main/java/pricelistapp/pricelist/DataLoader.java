@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import pricelistapp.pricelist.entity.UserEntity;
 import pricelistapp.pricelist.repository.RoleRepository;
 import pricelistapp.pricelist.repository.UserRepository;
 

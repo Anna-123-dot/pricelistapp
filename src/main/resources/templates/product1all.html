@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Log In</title>
+    <title>Product no 1 show all</title>
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
@@ -46,9 +46,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/index/products">Our Products and Prices</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index/contact">Contact Us</a>
-                    </li>
                 </ul>
             </div>
             <div class="functional-buttons">
@@ -67,38 +64,36 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>PLEASE LOG IN</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th> Id</th>
+                        <th> Size</th>
+                        <th> Housing</th>
+                        <th> Diaphragm</th>
+                        <th> Valves</th>
+                        <th> Connections</th>
+                        <th> Air valves</th>
+                        <th> Price</th>
+
+                    </tr>
+                    </thead>
+                    <tr th:each="product1: ${product1all}">
+                        <td th:text="${product1.id}"/>
+                        <td th:text="${product1.size}"/>
+                        <td th:text="${product1.housing}"/>
+                        <td th:text="${product1.diaphragm}"/>
+                        <td th:text="${product1.valves}"/>
+                        <td th:text="${product1.connections}"/>
+                        <td th:text="${product1.airValves}"/>
+                        <td th:text="${product1.price}"/>
+
+                    </tr>
+                </table>
             </div>
-            <form class="form_settings" role="form" th:object="${login}" th:action="@{/index/login}" method="get">
-
-                <div>
-                    <input type="text" name="login" placeholder="Your username" required>
-                </div>
-
-                <div>
-                    <input type="password" name="password" placeholder="Your password" required>
-                </div>
-
-
-                <div>
-                    <input type="submit" value="Log in" class="main-button">
-                </div>
-                <div class="container">
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-                <div class="container">
-						<span class="col-md-12">
-							Don’t have an account?
-						</span>
-                    <a class="col-md-12" href="/index/signup">
-                        Sign Up
-                    </a>
-                </div>
-            </form>
         </div>
     </div>
 </div>
-
 <!-- Heading Ends Here -->
 
 
@@ -128,7 +123,7 @@
                         <h2>More Information</h2>
                     </div>
                     <ul class="footer-list">
-                        <li>Phone: <a href="tel:+48721228316">012-345-6789</a></li>
+                        <li>Phone: <a href="tel:+48721228316">010-020-0560</a></li>
                         <li>Address: Rzewuskiego St. 1b3, 83-000 Pruszcz Gdanski, Poland</li>
                         <li>Email: <a href="mailto:mail@fakecompany.com">mail@fakecompany.com</a></li>
                         <li>Support: <a href="mailto:support@fakecompany.com">support@fakecompany.com</a></li>

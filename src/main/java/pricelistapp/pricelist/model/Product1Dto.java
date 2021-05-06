@@ -39,6 +39,24 @@ public class Product1Dto {
     @NotNull
     private double price;
 
+    public Product1Dto() {
+    }
+
+    public Product1Dto(Long id, @NotNull int size, @NotNull @NotEmpty @Size(min = 4, max = 255) String housing,
+                       @NotNull @NotEmpty @Size(min = 4, max = 255) String diaphragm,
+                       @NotNull @NotEmpty @Size(min = 4, max = 255) String valves,
+                       @NotNull @NotEmpty @Size(min = 4, max = 255) String connections,
+                       @NotNull @NotEmpty @Size(min = 4, max = 255) String airValves, @NotNull double price) {
+        this.id = id;
+        this.size = size;
+        this.housing = housing;
+        this.diaphragm = diaphragm;
+        this.valves = valves;
+        this.connections = connections;
+        this.airValves = airValves;
+        this.price = price;
+    }
+
     public Long getId() {
         return id;
     }
